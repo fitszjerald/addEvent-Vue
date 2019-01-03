@@ -41,6 +41,11 @@ new Vue({
             this.evente = {
                 name :'',description : '',date : '', 
             }
+        },
+        delEvent : function(event){
+            if(confirm('are you sure ???')){
+            this.events.$remove(event);
+            }
         }
     },
 })

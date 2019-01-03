@@ -33,7 +33,7 @@
                         <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-bullhorn"></span>{{event.name}}</h4>
                         <h5 v-if='event.date'><span class="glyphicon glyphicon-calendar"></span>{{event.date}}</h5>
                         <p  v-if = 'event.description' class="list-group-item-text">{{event.description}}</p>
-                        <button class="btn btn-xs btn-danger">delete</button>  
+                        <button class="btn btn-xs btn-danger" @click='delEvent(event)'>delete</button>  
                     </a>
                 </div>
             </div>
