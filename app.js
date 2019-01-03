@@ -5,7 +5,12 @@ new Vue({
     
     data : {
         
-        
+        evente:{
+            name :'',
+            description : '',
+            date : '', 
+        },
+
         events : [
         {    
             id: 1,
@@ -26,5 +31,16 @@ new Vue({
             date: '2016-03-11'
         }
         ]
-    }
+    },
+    methods: {
+        addEvent : function(){
+            if(this.evente.name){
+            this.events.push(this.evente);
+
+            }
+            this.evente = {
+                name :'',description : '',date : '', 
+            }
+        }
+    },
 })
